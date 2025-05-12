@@ -14,7 +14,7 @@
 
 람다 표현식은 `() -> {}` 포맷만으로 구현 가능해서, 익명 클래스 인스턴스화의 단점을 해소할 수 있다.
 ```java
-// 람다식을 사용하기 전
+// 람다식을 사용하지 않고 구현
 Predicate<Moja> predicate = new Predicate<Moja>() {
     @Override
     public boolean test(Moja moja) {
@@ -22,7 +22,7 @@ Predicate<Moja> predicate = new Predicate<Moja>() {
     }
 };
 
-// 람다식을 사용한 후
+// 람다식을 사용해서 구현
 Predicate<Moja> predicate = (Moja moja) -> moja.isRed();
 ```
 스트림 API에도 람다식이 유용하게 쓰인다. 자연어로 읽힐 수 있는 람다식은 선언형(declarative) 프로그래밍에 일조한다.
