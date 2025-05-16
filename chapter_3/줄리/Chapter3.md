@@ -63,7 +63,7 @@ Predicate<Moja> predicate = Moja::isRed;
 ### 6. 람다 만들기
 람다는 람다 표현식(`() -> {}`) 또는 메서드 참조(`Object::method`)로 구현할 수 있다. 그 외에도 람다식을 조합해 사용할 수도 있다.
 ```java
-Predicate<Moja> predicate = (moja) -> isRed();
+Predicate<Moja> predicate = (moja) -> moja.isRed();
 
 // Predicate<T>의 negate 메서드는 또다른 Predicate<T>를 반환하기 때문에, 계속 이어서 사용할 수 있음
 predicate.negate().negate().negate();
